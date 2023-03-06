@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model ProfileViewModel
+@{
+    var Profile = ViewData["Profile"] as ProfileViewModel;
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/Profile.css"/>
+</head>
+
+<div class="profileContainer">
+
+    <h1>This is the Profile Page for @Profile.Name</h1>
+
+    <div class="profile">
+        <div class="row">
+            <div class="column"><i class="fa-solid fa-image-portrait"></i></div>
+            <div class="column">@Profile.Name @Profile.Surname</div>
+        </div>
+        <div class="row">
+            <div class="column"><i class="fa-solid fa-calendar"></i></div>
+            <div class="column">@Profile.DOB</div>
+        </div>
+        <div class="row">
+            <div class="column"><i class="fa-solid fa-people-group"></i></div>
+            <div class="column">@Profile.Age</div>
+        </div>
+        <div class="row">
+            <div class="column"><i class="fa-solid fa-globe"></i></div>
+            <div class="column">@Profile.Country</div>
+        </div>
+        <div class="row">
+            <div class="column"><i class="fa-solid fa-city"></i></div>
+            <div class="column">@Profile.City</div>
+        </div>
+    </div>
+</div>
+

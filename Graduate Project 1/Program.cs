@@ -26,5 +26,8 @@ app.MapControllerRoute(
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Yasteel}/{action=Index}");
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Profile}/{action=Index}");
 
 app.Run();
