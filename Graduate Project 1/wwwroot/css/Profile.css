@@ -1,0 +1,50 @@
+﻿:root {
+    --green: #97c93f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.profileContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile {
+    width: 600px;
+    font-size: 1.2rem;
+}
+
+.row{
+    height: 3rem;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.row .column:first-child {
+    width: 3rem;
+    justify-content: center;
+    background: var(--green);
+    border-radius: 5px 0 0 5px;
+}
+
+.row .column:last-child {
+    border: 1px solid var(--green);
+}
+
+
+.profile :is(.row,.column){
+    display: flex;
+    align-items: center;
+}
+
+.profile .column{
+    height: 100%;
+}
