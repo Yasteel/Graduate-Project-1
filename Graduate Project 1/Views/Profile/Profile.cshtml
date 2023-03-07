@@ -1,9 +1,9 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@model ProfileViewModel
+@model Profiles
 @{
-    var Profile = ViewData["Profile"] as ProfileViewModel;
+    var Profile = ViewData["Profile"] as Profiles;
 }
 
 <head>
@@ -21,7 +21,7 @@
         </div>
         <div class="row">
             <div class="column"><i class="fa-solid fa-calendar"></i></div>
-            <div class="column">@Profile.DOB</div>
+            <div class="column">@Profile.DOB.Year</div>
         </div>
         <div class="row">
             <div class="column"><i class="fa-solid fa-people-group"></i></div>
