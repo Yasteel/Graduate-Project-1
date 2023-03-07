@@ -1,0 +1,76 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --gray: #212529;
+    --green: #97c93f;
+    --red: #dc3545;
+}
+
+a {
+    color: var(--gray);
+    text-decoration: none;
+}
+
+.createUser a {
+    padding: .5rem 1.5rem;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    background: none;
+    color: var(--gray);
+    outline: none;
+}
+
+.createUser a:is(:hover, :focus) {
+    transition: 200ms ease-in-out border, 250ms ease-in-out color;
+}
+
+a:is(:hover, :focus) {
+    color: var(--green);
+    border-color: var(--green);
+
+}
+
+.userListing{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+}
+
+.userListing :is(.row:not(:first-child)){
+    border: 1px solid var(--green);
+}
+
+.userListing :is(.row){
+    min-height: 3rem;
+}
+
+.userListing :is(.col){
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.userListing :is(.col:first-child) {
+    justify-content: flex-start;
+}
+
+.col.controls{
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.col.controls a{
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.col.controls a.delete :is(:hover, :focus){
+    color: var(--red);
+}
+
